@@ -2,6 +2,7 @@ from pyspark.ml import PipelineModel
 from pyspark.ml.functions import vector_to_array
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
+from constant import *
 
 
 def get_spark_session(app_name: str = "dataScoring") -> SparkSession:
@@ -44,7 +45,6 @@ def score_insurances(spark: SparkSession, model_path: str, insurances_df):
 
 
 def main():
-    destination = "/Volumes/<team_name>/<project_name>/model-training-1"
 
     spark = get_spark_session()
     new_insurances = build_new_insurances(spark)

@@ -2,6 +2,7 @@ from pyspark.ml import Pipeline
 from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.feature import OneHotEncoder, StringIndexer, VectorAssembler
 from pyspark.sql import SparkSession
+from constant import *
 
 
 def get_spark_session(app_name: str = "DBX ModelTraining") -> SparkSession:
@@ -101,7 +102,6 @@ def main():
     """
     Save the model in the DBX volume
     """
-    destination = "/Volumes/<team_name>/<project_name>/model-training-1"
 
     spark = get_spark_session()
     train_df = build_training_data(spark)
