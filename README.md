@@ -169,7 +169,7 @@ Suppose the model was logged as:
 name = "bigSky_pipeline_uc"
 
 registered_model_name = (
-    "prod_ml.claim_models.claim_bigSky"
+    "prod_ml.insurance_models.insurance_bigSky"
 )
 ```
 
@@ -182,7 +182,7 @@ artifact_path="bigSky_pipeline_uc"
 Do **not** use:
 
 ```python
-artifact_path="prod_ml.claim_models.claim_bigSky"
+artifact_path="prod_ml.insurance_models.insurance_bigSky"
 ```
 
 `registered_model_name` belongs to the Model Registry / Unity Catalog layer, while `artifact_path` refers to the artifact location within a specific MLflow run.
