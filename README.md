@@ -199,7 +199,7 @@ MLflow Run
 │       └── conda.yaml
 │
 └── Registered Model
-    prod_ml.claim_models.claim_bigSky
+    prod_ml.insurance_models.insurance_bigSky
         ├── Version 1
         ├── Version 2
         └── Version N
@@ -217,3 +217,7 @@ MLflow Run
 | Deploy or serve models | `registered_model_name` |
 
 > **Key takeaway:** Use the logged model `name` when working with artifacts inside an MLflow run. Use `registered_model_name` when working with Unity Catalog, model versions, aliases, deployment, or serving.
+
+## Document to install MLFlow in Minikube
+
+https://medium.com/@watermark1983/install-mlflow-with-minikube-0c1477f42817
